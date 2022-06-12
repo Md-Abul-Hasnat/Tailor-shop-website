@@ -5,13 +5,11 @@ const navs = document.querySelector(".navs");
 // open and close menu functionality ========>>>>>
 
 openMenuIcon.addEventListener("click", function () {
-  navs.style.right = "0%";
+  navs.style.right = "0px";
   openMenuIcon.style.display = "none";
-  closeMenuIcon.style.right = "5%";
 });
 
 closeMenuIcon.addEventListener("click", function () {
-  navs.style.right = "-40%";
-  closeMenuIcon.style.right = "-20%";
+  navs.style.right = "-500px";
   openMenuIcon.style.display = "block";
 });

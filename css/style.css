@@ -10,10 +10,14 @@
   scroll-behavior: smooth;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 header {
   width: 100%;
   background-image: url(../images/bg-pattern.jpg);
-  height: 23vh;
+  height: 150px;
   border-bottom: 10px solid#635739;
 }
 
@@ -55,7 +59,7 @@ header {
   color: #c9bb90;
 }
 
-.header-right .fa-xmark {
+.navs .fa-xmark {
   color: transparent;
   font-size: 40px;
   display: none;
@@ -366,10 +370,6 @@ footer small {
 }
 
 @media only screen and (max-width: 900px) {
-  body {
-    overflow-x: hidden;
-  }
-
   .navbar {
     position: relative;
     width: 100%;
@@ -380,40 +380,34 @@ footer small {
     display: flex;
     flex-direction: column;
     background-image: url("../images/bg-pattern.jpg");
-    width: 40%;
-    position: absolute;
-    top: 0px;
-    right: -40%;
-    display: block;
-    padding-left: 10px;
-    padding-top: 120px;
-
+    width: 55%;
+    position: fixed;
+    top: 0;
+    right: -500px;
     text-align: center;
-    transition: right 0.4s ease-in;
-  }
-
-  .navs li {
-    margin-bottom: 15px;
+    transition: right 0.5s;
   }
 
   .header-right .fa-bars {
-    display: inline-block;
+    color: #8e7835;
+    display: block;
     position: absolute;
     top: 30px;
-    right: 10%;
-    padding-right: 20px;
-    color: #8e7835;
+    right: 60px;
+    cursor: pointer;
   }
 
-  .header-right .fa-xmark {
-    display: inline-block;
-    position: absolute;
-    top: 30px;
-    right: 30%;
-    padding-right: 20px;
+  .navs .fa-xmark {
+    display: block;
     color: #8e7835;
-    right: -10%;
-    transition: all 0.5s;
+    position: absolute;
+    top: 5px;
+    right: 50px;
+    cursor: pointer;
+  }
+
+  body {
+    overflow-x: hidden;
   }
 }
 
@@ -485,6 +479,28 @@ footer small {
   .container {
     width: 95%;
     gap: 10px;
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .header-right .fa-bars {
+    right: 20px;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .header-left img {
+    width: 170px;
+  }
+
+  .header-right .fa-bars {
+    font-size: 30px;
+    top: 30px;
+  }
+
+  .navs .fa-xmark {
+    right: 5px;
+    top: 0;
   }
 }
 
