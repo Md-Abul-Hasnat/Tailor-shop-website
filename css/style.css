@@ -486,9 +486,14 @@ footer small {
   .header-right .fa-bars {
     right: 20px;
   }
+
+  .navs .fa-xmark {
+    right: 10px;
+    top: 0;
+  }
 }
 
-@media only screen and (max-width: 350px) {
+@media only screen and (max-width: 400px) {
   .header-left img {
     width: 170px;
   }
@@ -499,8 +504,9 @@ footer small {
   }
 
   .navs .fa-xmark {
-    right: 5px;
+    right: 10px;
     top: 0;
+    font-size: 30px;
   }
 }
 
